@@ -1,0 +1,9 @@
+export { About } from "./About";
+export { CaseStudies } from "./CaseStudies";
+export { FAQ } from "./FAQ";
+export { Footer } from "./Footer";
+export { Header } from "./Header";
+export { Hero } from "./Hero";
+export { Pricing } from "./Pricing";
+export { Services } from "./Services";
+export { Testimonials } from "./Testimonials";
