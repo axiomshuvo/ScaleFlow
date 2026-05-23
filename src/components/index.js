@@ -7,3 +7,4 @@ export { Hero } from "./Hero";
 export { Pricing } from "./Pricing";
 export { Services } from "./Services";
 export { Testimonials } from "./Testimonials";
+export { ThemeToggle } from "./ThemeToggle";

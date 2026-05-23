@@ -12,7 +12,7 @@ import {
 
 function App() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-white to-slate-50 text-slate-900">
+    <div className="min-h-screen bg-base-100 text-base-content">
       <Header />
 
       <main className="mx-auto max-w-6xl px-6 py-8 lg:px-8">

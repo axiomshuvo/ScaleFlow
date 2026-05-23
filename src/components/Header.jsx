@@ -1,3 +1,5 @@
+import { ThemeToggle } from "./ThemeToggle";
+
 export const Header = () => {
   return (
     <header className="sticky top-0 z-30 bg-white/90 backdrop-blur shadow-sm">
@@ -21,9 +23,12 @@ export const Header = () => {
             FAQ
           </a>
         </nav>
-        <button className="px-4 py-2 bg-indigo-800 text-white font-semibold rounded-lg hover:bg-indigo-700 transition text-sm">
-          Get Started
-        </button>
+        <div className="flex items-center gap-2">
+          <ThemeToggle />
+          <button className="px-4 py-2 bg-indigo-800 text-white font-semibold rounded-lg hover:bg-indigo-700 transition text-sm">
+            Get Started
+          </button>
+        </div>
       </div>
     </header>
   );
