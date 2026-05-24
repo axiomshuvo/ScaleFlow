@@ -2,6 +2,8 @@
 
 A sleek, fast, and fully responsive single-page marketing site for a digital growth agency. Built with React 19, Vite 8, Tailwind CSS v4, and DaisyUI v5 — with a buttery-smooth dark/light theme toggle and a bold, colorful design inspired by a real reference layout. 🌙☀️🎨
 
+🔗 **Live Demo → [scale-flow-ruddy.vercel.app](https://scale-flow-ruddy.vercel.app/)**
+
 ---
 
 ## ✨ Features

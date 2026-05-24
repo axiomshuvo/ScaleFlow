@@ -54,19 +54,13 @@ export const CASE_STUDIES = [
   },
 ];
 
+const SERVICE_DESC =
+  "Boost visibility and engagement with powerful SEO strategies and compelling content that drive traffic, enhance rankings, and conversions.";
+
 export const SERVICES = [
-  {
-    title: "SEO & Content Marketing",
-    desc: "Organic visibility, keyword and content campaigns built for consistent lead flow.",
-  },
-  {
-    title: "Pay-Per-Click Advertising",
-    desc: "ROI-driven paid acquisition across search and social channels.",
-  },
-  {
-    title: "Social Media Management",
-    desc: "Creative ad design, community growth, and performance tracking.",
-  },
+  { title: "SEO & Content Marketing", desc: SERVICE_DESC },
+  { title: "Pay-Per-Click Advertising", desc: SERVICE_DESC },
+  { title: "Socmed Management", desc: SERVICE_DESC },
 ];
 
 export const PRICING_PLANS = [
