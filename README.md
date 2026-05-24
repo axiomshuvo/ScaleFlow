@@ -17,12 +17,12 @@ A sleek, fast, and fully responsive single-page marketing site for a digital gro
 
 ## 🛠️ Tech Stack
 
-| Tool | Version |
-|---|---|
-| React | ^18.3.1 |
-| Vite | ^8.0.3 |
-| Tailwind CSS | ^3.4.3 |
-| DaisyUI | ^3.2.2 |
+| Tool         | Version |
+| ------------ | ------- |
+| React        | ^18.3.1 |
+| Vite         | ^8.0.3  |
+| Tailwind CSS | ^3.4.3  |
+| DaisyUI      | ^3.2.2  |
 | lucide-react | ^1.16.0 |
 
 ---

@@ -1,3 +1,16 @@
+export const NAV_LINKS = [
+  { label: "Home", href: "#" },
+  { label: "About", href: "#about" },
+  { label: "Cases", href: "#cases" },
+  { label: "Pricing", href: "#pricing" },
+];
+
+export const STATS = [
+  { value: "264%", label: "SEO Research" },
+  { value: "136%", label: "Leads Generated" },
+  { value: "10+", label: "Years of Experience" },
+];
+
 export const CASE_STUDIES = [
   {
     id: 1,
@@ -8,14 +21,14 @@ export const CASE_STUDIES = [
   },
   {
     id: 2,
-    name: "Sapphire",
+    name: "Emperhio",
     date: "24 Mar 2024",
     desc: "Transformed creative vision into scalable digital solutions",
     color: "bg-blue-500",
   },
   {
     id: 3,
-    name: "Velocity",
+    name: "YSL",
     date: "28 Apr 2024",
     desc: "Accelerated growth through strategic design & development",
     color: "bg-pink-500",

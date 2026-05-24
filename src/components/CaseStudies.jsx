@@ -1,34 +1,39 @@
 import { CASE_STUDIES } from "../utils/constants";
+import { CaseStudyRow } from "./PortfolioCard";
 
 export const CaseStudies = () => {
   return (
-    <section className="py-20">
-      <div className="mb-12">
-        <h2 className="text-4xl font-black text-indigo-900 mb-4">
-          Showcasing Creativity
+    <section id="cases" className="py-20">
+      {/* Heading */}
+      <div className="mb-10">
+        <h2 className="text-4xl md:text-5xl font-black text-indigo-900 leading-tight">
+          Showcasing <span className="text-yellow-400">Creativity</span>
+          <br />
+          Inspiring <span className="text-yellow-400">Possibilities.</span>
         </h2>
-        <p className="text-xl text-slate-600">
-          <span className="font-bold">Inspiring Possibilities.</span>
-        </p>
       </div>
-      <div className="space-y-6">
-        {CASE_STUDIES.map((study, idx) => (
-          <div
+
+      {/* Case study rows */}
+      <div className="mb-10">
+        {CASE_STUDIES.map((study) => (
+          <CaseStudyRow
             key={study.id}
-            className="flex items-start gap-6 group cursor-pointer"
-          >
-            <div
-              className={`${study.color} w-20 h-20 rounded-lg flex-shrink-0 group-hover:shadow-lg transition`}
-            />
-            <div className="flex-1">
-              <h3 className="font-bold text-lg text-indigo-900">
-                {study.name}
-              </h3>
-              <p className="text-sm text-slate-500">{study.date}</p>
-              <p className="text-slate-700 mt-2">{study.desc}</p>
-            </div>
-          </div>
+            name={study.name}
+            date={study.date}
+            desc={study.desc}
+            color={study.color}
+          />
         ))}
+      </div>
+
+      {/* Colorful decorative banner */}
+      <div className="grid grid-cols-6 gap-2 rounded-2xl overflow-hidden h-20">
+        <div className="bg-green-400" />
+        <div className="bg-yellow-400" />
+        <div className="bg-red-400" />
+        <div className="bg-blue-500" />
+        <div className="bg-orange-400" />
+        <div className="bg-pink-400" />
       </div>
     </section>
   );

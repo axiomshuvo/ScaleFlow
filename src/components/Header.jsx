@@ -1,33 +1,41 @@
+import { Search } from "lucide-react";
+import { NAV_LINKS } from "../utils/constants";
 import { ThemeToggle } from "./ThemeToggle";
 
 export const Header = () => {
   return (
-    <header className="sticky top-0 z-30 bg-white/90 backdrop-blur shadow-sm">
+    <header className="sticky top-0 z-30 bg-white/95 backdrop-blur border-b border-slate-100">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-        <div className="text-xl font-black text-indigo-800">SolverCorp</div>
+        {/* Logo */}
+        <a
+          href="#"
+          className="text-xl font-black text-indigo-900 tracking-tight"
+        >
+          SolverCorp<span className="text-yellow-400">.</span>
+        </a>
 
-        <nav className="hidden gap-6 text-white font-light rounded-full md:flex items-center bg-indigo-800 px-4 py-2 rounded-lg">
-          <a href="#about" className="active ">
-            Home
-          </a>
-          <a href="#about" className=" ">
-            About
-          </a>
-          <a href="#services" className=" ">
-            Services
-          </a>
-          <a href="#pricing" className=" ">
-            Pricing
-          </a>
-          <a href="#faq" className=" ">
-            FAQ
-          </a>
+        {/* Nav links */}
+        <nav className="hidden md:flex items-center gap-8">
+          {NAV_LINKS.map((link) => (
+            <a
+              key={link.label}
+              href={link.href}
+              className="text-sm font-medium text-slate-600 hover:text-indigo-900 transition"
+            >
+              {link.label}
+            </a>
+          ))}
         </nav>
-        <div className="flex items-center gap-2">
-          <ThemeToggle />
-          <button className="px-4 py-2 bg-indigo-800 text-white font-semibold rounded-lg hover:bg-indigo-700 transition text-sm">
-            Get Started
+
+        {/* Right side */}
+        <div className="flex items-center gap-3">
+          <button
+            aria-label="Search"
+            className="p-2 rounded-full hover:bg-slate-100 transition"
+          >
+            <Search size={18} className="text-slate-600" />
           </button>
+          <ThemeToggle />
         </div>
       </div>
     </header>
