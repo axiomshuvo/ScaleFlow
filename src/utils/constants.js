@@ -6,9 +6,21 @@ export const NAV_LINKS = [
 ];
 
 export const STATS = [
-  { value: "264%", label: "SEO Research" },
-  { value: "136%", label: "Leads Generated" },
-  { value: "10+", label: "Years of Experience" },
+  {
+    prefix: "ROI Increased by ",
+    value: "300%",
+    headline: "Data-backed performance marketing",
+  },
+  {
+    value: "1M+",
+    suffix: " Leads Generated",
+    headline: "High-quality prospects for your business",
+  },
+  {
+    value: "10+",
+    suffix: " Years of Experience",
+    headline: "A decade of driving digital success.",
+  },
 ];
 
 export const CASE_STUDIES = [
