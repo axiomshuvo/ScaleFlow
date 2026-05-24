@@ -14,9 +14,25 @@ Before writing any code or making changes:
 
 ---
 
-## 2. Git Pull & Push After Every Feature or Bug Fix
+## 2. Always Verify Output Before Calling Work Complete
 
-After every completed feature or bug fix (not mid-task), run these commands in order:
+**After every implementation — no exceptions — run a verification check before git push or telling the user the work is done.**
+
+### Verification checklist (run in order):
+
+1. **Run `npm run build`** — must complete with `✓ built` and zero errors. Warnings about deprecated classes must also be fixed.
+2. **Check the running dev server** (`npm run dev`) — open the browser and visually confirm the affected sections render correctly with no console errors.
+3. **Fix any errors found** before proceeding. Do not push broken code.
+4. Only after all checks pass: proceed to git pull → add → commit → push.
+5. Only after the push succeeds: tell the user the work is complete.
+
+> If a build or dev server is already running from a previous step, check its output rather than starting a new one.
+
+---
+
+## 3. Git Pull & Push After Every Feature or Bug Fix
+
+After verification passes (see Rule 2), run these commands in order:
 
 ```bash
 git pull
@@ -31,7 +47,7 @@ git push
 
 ---
 
-## 3. Always Update README and This File After Every Task
+## 4. Always Update README and This File After Every Task
 
 After every completed feature, design change, or structural update:
 
@@ -43,7 +59,7 @@ This keeps the project self-documenting and future work starts with accurate con
 
 ---
 
-## 4. Always Check Available Packages First
+## 5. Always Check Available Packages First
 
 Before suggesting or using any library:
 
@@ -59,19 +75,19 @@ Before suggesting or using any library:
 
 ### Current project stack (keep this updated):
 
-| Package           | Version  |
-| ----------------- | -------- |
-| react             | ^19.2.6  |
-| react-dom         | ^19.2.6  |
-| vite              | ^8.0.14  |
-| @tailwindcss/vite | ^4.3.0   |
-| tailwindcss       | ^4.3.0   |
-| daisyui           | ^5.5.20  |
-| lucide-react      | ^1.16.0  |
+| Package           | Version |
+| ----------------- | ------- |
+| react             | ^19.2.6 |
+| react-dom         | ^19.2.6 |
+| vite              | ^8.0.14 |
+| @tailwindcss/vite | ^4.3.0  |
+| tailwindcss       | ^4.3.0  |
+| daisyui           | ^5.5.20 |
+| lucide-react      | ^1.16.0 |
 
 ---
 
-## 5. Code Style & Conventions
+## 6. Code Style & Conventions
 
 - **Framework**: React 19 functional components with hooks — no class components.
 - **Styling**: Tailwind CSS v4 utility classes + DaisyUI v5 component classes. No inline styles.
@@ -87,32 +103,35 @@ Before suggesting or using any library:
 
 ---
 
-## 6. Component Architecture
+## 7. Component Architecture
 
 The project splits UI into **section components** (one per page section) and **named sub-components** (repeated UI elements).
 
 ### Section components (in `src/components/`):
+
 `Header` · `Hero` · `About` · `CaseStudies` · `Services` · `Pricing` · `FAQ` · `Testimonials` · `CTA` · `Footer`
 
 ### Sub-components (reusable named pieces):
-| File | Export | Used In |
-|---|---|---|
-| `StatCard.jsx` | `StatItem` | About |
-| `ServiceCard.jsx` | `ServiceItem` | Services |
-| `PortfolioCard.jsx` | `CaseStudyRow` | CaseStudies |
+
+| File                  | Export            | Used In      |
+| --------------------- | ----------------- | ------------ |
+| `StatCard.jsx`        | `StatItem`        | About        |
+| `ServiceCard.jsx`     | `ServiceItem`     | Services     |
+| `PortfolioCard.jsx`   | `CaseStudyRow`    | CaseStudies  |
 | `TestimonialCard.jsx` | `TestimonialCard` | Testimonials |
-| `PricingCard.jsx` | `PricingCard` | Pricing |
-| `FaqItem.jsx` | `FaqItem` | FAQ |
-| `ThemeToggle.jsx` | `ThemeToggle` | Header |
+| `PricingCard.jsx`     | `PricingCard`     | Pricing      |
+| `FaqItem.jsx`         | `FaqItem`         | FAQ          |
+| `ThemeToggle.jsx`     | `ThemeToggle`     | Header       |
 
 ### Data layer (`src/utils/constants.js`):
+
 `NAV_LINKS` · `STATS` · `CASE_STUDIES` · `SERVICES` · `PRICING_PLANS` · `FAQ_ITEMS` · `TESTIMONIALS`
 
 When adding a new section, always: create a section component + any needed sub-component + add data to `constants.js` + export from `index.js`.
 
 ---
 
-## 7. Design System
+## 8. Design System
 
 - **Primary brand color**: `indigo-900` (dark sections, buttons)
 - **Accent / CTA**: `yellow-400` (highlighted text, CTA buttons)
@@ -122,7 +141,7 @@ When adding a new section, always: create a section component + any needed sub-c
 
 ---
 
-## 8. No Over-Engineering
+## 9. No Over-Engineering
 
 - Only make changes that are directly requested or clearly necessary.
 - Do not add extra features, refactoring, or "improvements" beyond the task scope.

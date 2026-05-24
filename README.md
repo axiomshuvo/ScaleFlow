@@ -19,14 +19,14 @@ A sleek, fast, and fully responsive single-page marketing site for a digital gro
 
 ## 🛠️ Tech Stack
 
-| Tool              | Version  |
-| ----------------- | -------- |
-| React             | ^19.2.6  |
-| Vite              | ^8.0.14  |
-| Tailwind CSS      | ^4.3.0   |
-| DaisyUI           | ^5.5.20  |
-| @tailwindcss/vite | ^4.3.0   |
-| lucide-react      | ^1.16.0  |
+| Tool              | Version |
+| ----------------- | ------- |
+| React             | ^19.2.6 |
+| Vite              | ^8.0.14 |
+| Tailwind CSS      | ^4.3.0  |
+| DaisyUI           | ^5.5.20 |
+| @tailwindcss/vite | ^4.3.0  |
+| lucide-react      | ^1.16.0 |
 
 ---
 
