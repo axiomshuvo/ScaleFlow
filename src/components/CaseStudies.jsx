@@ -5,35 +5,33 @@ export const CaseStudies = () => {
   return (
     <section id="cases" className="py-20">
       {/* Heading */}
-      <div className="mb-10">
+      <div className="mb-4 text-center">
         <h2 className="text-4xl md:text-5xl font-black text-indigo-900 leading-tight">
-          Showcasing <span className="text-yellow-400">Creativity</span>
+          Showcasing{" "}
+          <span className="bg-yellow-400 text-indigo-900 px-2">Creativity</span>
           <br />
-          Inspiring <span className="text-yellow-400">Possibilities.</span>
+          Inspiring Possibilities.
         </h2>
       </div>
 
+      {/* Subtext */}
+      <p className="text-center text-slate-500 text-sm max-w-xl mx-auto mb-12">
+        We are a digital marketing agency committed to delivering innovative
+        strategies that elevate your brand, increase engagement, and drive
+        measurable growth.
+      </p>
+
       {/* Case study rows */}
-      <div className="mb-10">
+      <div>
         {CASE_STUDIES.map((study) => (
           <CaseStudyRow
             key={study.id}
             name={study.name}
             date={study.date}
             desc={study.desc}
-            color={study.color}
+            image={study.image}
           />
         ))}
-      </div>
-
-      {/* Colorful decorative banner */}
-      <div className="grid grid-cols-6 gap-2 rounded-2xl overflow-hidden h-20">
-        <div className="bg-green-400" />
-        <div className="bg-yellow-400" />
-        <div className="bg-red-400" />
-        <div className="bg-blue-500" />
-        <div className="bg-orange-400" />
-        <div className="bg-pink-400" />
       </div>
     </section>
   );

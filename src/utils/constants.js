@@ -24,27 +24,33 @@ export const STATS = [
   },
 ];
 
+const CASE_DESC =
+  "Boost visibility and engagement with powerful SEO strategies and compelling content that drive traffic, enhance rankings, and maximize conversions.";
+
 export const CASE_STUDIES = [
   {
     id: 1,
     name: "Builder",
     date: "24 Feb 2024",
-    desc: "Crafted a cohesive brand identity and digital ecosystem",
-    color: "bg-orange-500",
+    desc: CASE_DESC,
+    image:
+      "https://images.pexels.com/photos/2219024/pexels-photo-2219024.jpeg?auto=compress&cs=tinysrgb&w=600",
   },
   {
     id: 2,
     name: "Emperhio",
     date: "24 Mar 2024",
-    desc: "Transformed creative vision into scalable digital solutions",
-    color: "bg-blue-500",
+    desc: CASE_DESC,
+    image:
+      "https://images.pexels.com/photos/1287145/pexels-photo-1287145.jpeg?auto=compress&cs=tinysrgb&w=600",
   },
   {
     id: 3,
     name: "YSL",
     date: "28 Apr 2024",
-    desc: "Accelerated growth through strategic design & development",
-    color: "bg-pink-500",
+    desc: CASE_DESC,
+    image:
+      "https://images.pexels.com/photos/1036623/pexels-photo-1036623.jpeg?auto=compress&cs=tinysrgb&w=600",
   },
 ];
 
