@@ -1,4 +1,3 @@
-import { Search } from "lucide-react";
 import { useState } from "react";
 import { NAV_LINKS } from "../utils/constants";
 import { ThemeToggle } from "./ThemeToggle";
@@ -39,12 +38,6 @@ export const Header = () => {
 
         {/* Right side */}
         <div className="flex items-center gap-3">
-          <button
-            aria-label="Search"
-            className="bg-indigo-900 rounded-full p-2.5 hover:bg-indigo-800 transition"
-          >
-            <Search size={18} className="text-yellow-400" />
-          </button>
           <ThemeToggle />
         </div>
       </div>
