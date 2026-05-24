@@ -1,14 +1,14 @@
 export { About } from "./About";
 export { CaseStudies } from "./CaseStudies";
-export { CaseStudyRow } from "./PortfolioCard";
 export { CTA } from "./CTA";
 export { FAQ } from "./FAQ";
 export { FaqItem } from "./FaqItem";
 export { Footer } from "./Footer";
 export { Header } from "./Header";
 export { Hero } from "./Hero";
-export { PricingCard } from "./PricingCard";
+export { CaseStudyRow } from "./PortfolioCard";
 export { Pricing } from "./Pricing";
+export { PricingCard } from "./PricingCard";
 export { ServiceItem } from "./ServiceCard";
 export { Services } from "./Services";
 export { StatItem } from "./StatCard";
