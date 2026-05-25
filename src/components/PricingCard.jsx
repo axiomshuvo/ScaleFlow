@@ -24,7 +24,9 @@ export const PricingCard = ({ name, price, desc, features, featured }) => {
           {price}
           <span
             className={`text-lg font-medium ml-1 ${
-              featured ? "text-indigo-300" : "text-slate-400 dark:text-slate-500"
+              featured
+                ? "text-indigo-300"
+                : "text-slate-400 dark:text-slate-500"
             }`}
           >
             /mo
@@ -33,7 +35,9 @@ export const PricingCard = ({ name, price, desc, features, featured }) => {
         {desc && (
           <p
             className={`text-sm mt-3 leading-relaxed ${
-              featured ? "text-indigo-300" : "text-slate-500 dark:text-slate-400"
+              featured
+                ? "text-indigo-300"
+                : "text-slate-500 dark:text-slate-400"
             }`}
           >
             {desc}
@@ -47,12 +51,20 @@ export const PricingCard = ({ name, price, desc, features, featured }) => {
           <li key={i} className="flex items-start gap-3 text-sm">
             <span
               className={`shrink-0 mt-0.5 ${
-                featured ? "text-yellow-400" : "text-indigo-600 dark:text-indigo-400"
+                featured
+                  ? "text-yellow-400"
+                  : "text-indigo-600 dark:text-indigo-400"
               }`}
             >
               ↗
             </span>
-            <span className={featured ? "text-indigo-200" : "text-slate-600 dark:text-slate-300"}>
+            <span
+              className={
+                featured
+                  ? "text-indigo-200"
+                  : "text-slate-600 dark:text-slate-300"
+              }
+            >
               {feature}
             </span>
           </li>

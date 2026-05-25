@@ -9,11 +9,17 @@ export const CaseStudyRow = ({ name, date, desc, image }) => {
       />
       {/* Name + date */}
       <div className="shrink-0">
-        <h3 className="text-lg font-bold text-indigo-900 dark:text-indigo-100">{name}</h3>
-        <p className="font-bold text-indigo-900 dark:text-indigo-100 mt-1">{date}</p>
+        <h3 className="text-lg font-bold text-indigo-900 dark:text-indigo-100">
+          {name}
+        </h3>
+        <p className="font-bold text-indigo-900 dark:text-indigo-100 mt-1">
+          {date}
+        </p>
       </div>
       {/* Description */}
-      <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">{desc}</p>
+      <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">
+        {desc}
+      </p>
     </div>
   );
 };

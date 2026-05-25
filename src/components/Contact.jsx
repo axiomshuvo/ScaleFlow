@@ -24,7 +24,7 @@ export const Contact = () => {
     <section id="contact" className="py-20">
       {/* Heading */}
       <div className="mb-12 text-center">
-        <p className="text-xs font-bold uppercase tracking-[0.2em] text-indigo-400 mb-3">
+        <p className="text-xs font-bold uppercase tracking-[0.2em] text-indigo-400 dark:text-indigo-300 mb-3">
           Get in Touch
         </p>
         <h2 className="text-4xl md:text-5xl font-black text-indigo-900 dark:text-indigo-100 leading-tight">
