@@ -17,17 +17,17 @@ export const Hero = () => {
 
       {/* Content */}
       <div className="relative z-10 space-y-8 max-w-4xl mx-auto px-4">
-        <p className="text-sm font-semibold uppercase tracking-widest text-indigo-500">
+        <p className="text-sm font-semibold uppercase tracking-widest text-indigo-500 dark:text-indigo-400">
           Digital Growth Studio
         </p>
-        <h1 className="text-5xl md:text-7xl font-black leading-tight text-indigo-900">
+        <h1 className="text-5xl md:text-7xl font-black leading-tight text-indigo-900 dark:text-indigo-100">
           We Crafting <span className="text-yellow-400">Real Results</span>
           <br />
           More Traffic, More Leads,
           <br />
           More Growth!
         </h1>
-        <p className="text-lg text-slate-500 max-w-xl mx-auto">
+        <p className="text-lg text-slate-500 dark:text-slate-400 max-w-xl mx-auto">
           Agency-level digital marketing built for fast-moving brands. Data-led
           strategy, creative execution, measurable conversions.
         </p>

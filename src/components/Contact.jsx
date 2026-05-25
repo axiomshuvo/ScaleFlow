@@ -27,11 +27,11 @@ export const Contact = () => {
         <p className="text-xs font-bold uppercase tracking-[0.2em] text-indigo-400 mb-3">
           Get in Touch
         </p>
-        <h2 className="text-4xl md:text-5xl font-black text-indigo-900 leading-tight">
+        <h2 className="text-4xl md:text-5xl font-black text-indigo-900 dark:text-indigo-100 leading-tight">
           Let&apos;s{" "}
           <span className="bg-yellow-400 text-indigo-900 px-2">Talk.</span>
         </h2>
-        <p className="mt-4 text-slate-500 text-sm max-w-md mx-auto leading-relaxed">
+        <p className="mt-4 text-slate-500 dark:text-slate-400 text-sm max-w-md mx-auto leading-relaxed">
           Tell us about your goals and we&apos;ll map out a strategy that moves
           the needle.
         </p>
@@ -45,7 +45,7 @@ export const Contact = () => {
             return (
               <div
                 key={label}
-                className="flex items-center gap-4 bg-white border border-slate-200 rounded-2xl px-6 py-5"
+                className="flex items-center gap-4 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-2xl px-6 py-5"
               >
                 <span className="flex-shrink-0 w-10 h-10 rounded-xl bg-indigo-900 text-white flex items-center justify-center">
                   <Icon size={18} />
@@ -54,7 +54,7 @@ export const Contact = () => {
                   <p className="text-xs font-bold uppercase tracking-widest text-slate-400 mb-0.5">
                     {label}
                   </p>
-                  <p className="text-sm font-semibold text-indigo-900">
+                  <p className="text-sm font-semibold text-indigo-900 dark:text-indigo-100">
                     {value}
                   </p>
                 </div>
@@ -78,7 +78,7 @@ export const Contact = () => {
         {/* Right — contact form */}
         <form
           onSubmit={handleSubmit}
-          className="bg-white border border-slate-200 rounded-2xl p-8 space-y-5"
+          className="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-2xl p-8 space-y-5"
           noValidate
         >
           <div className="grid sm:grid-cols-2 gap-4">
@@ -97,7 +97,7 @@ export const Contact = () => {
                 value={form.name}
                 onChange={handleChange}
                 placeholder="Alex Johnson"
-                className="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-indigo-900 placeholder:text-slate-300 focus:outline-none focus:ring-2 focus:ring-indigo-300 transition"
+                className="w-full rounded-xl border border-slate-200 dark:border-slate-600 bg-slate-50 dark:bg-slate-700 px-4 py-3 text-sm text-indigo-900 dark:text-slate-100 placeholder:text-slate-300 dark:placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-indigo-300 dark:focus:ring-indigo-500 transition"
               />
             </div>
             <div className="space-y-1.5">
@@ -115,7 +115,7 @@ export const Contact = () => {
                 value={form.email}
                 onChange={handleChange}
                 placeholder="alex@company.com"
-                className="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-indigo-900 placeholder:text-slate-300 focus:outline-none focus:ring-2 focus:ring-indigo-300 transition"
+                className="w-full rounded-xl border border-slate-200 dark:border-slate-600 bg-slate-50 dark:bg-slate-700 px-4 py-3 text-sm text-indigo-900 dark:text-slate-100 placeholder:text-slate-300 dark:placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-indigo-300 dark:focus:ring-indigo-500 transition"
               />
             </div>
           </div>
@@ -135,7 +135,7 @@ export const Contact = () => {
               value={form.message}
               onChange={handleChange}
               placeholder="Tell us about your project, goals, or questions..."
-              className="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-indigo-900 placeholder:text-slate-300 focus:outline-none focus:ring-2 focus:ring-indigo-300 transition resize-none"
+              className="w-full rounded-xl border border-slate-200 dark:border-slate-600 bg-slate-50 dark:bg-slate-700 px-4 py-3 text-sm text-indigo-900 dark:text-slate-100 placeholder:text-slate-300 dark:placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-indigo-300 dark:focus:ring-indigo-500 transition resize-none"
             />
           </div>
 

@@ -5,11 +5,13 @@ export const Pricing = () => {
   return (
     <section id="pricing" className="py-20">
       <div className="mb-12 text-center mx-auto">
-        <h2 className="text-4xl md:text-5xl font-black text-indigo-900 leading-tight">
+        <h2 className="text-4xl md:text-5xl font-black text-indigo-900 dark:text-indigo-100 leading-tight">
           Upgrade Today – Unlock
           <br />
           More Features,{" "}
-          <span className="bg-yellow-400 text-indigo-900 px-2">More Power,</span>
+          <span className="bg-yellow-400 text-indigo-900 px-2">
+            More Power,
+          </span>
           <br />
           More Growth!
         </h2>

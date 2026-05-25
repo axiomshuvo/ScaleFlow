@@ -6,13 +6,13 @@ export const PricingCard = ({ name, price, desc, features, featured }) => {
       className={`rounded-2xl p-8 flex flex-col gap-5 ${
         featured
           ? "bg-indigo-900 text-white"
-          : "bg-white border border-slate-200 text-slate-900"
+          : "bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-slate-100"
       }`}
     >
       {/* Plan name */}
       <p
         className={`text-xs font-bold uppercase tracking-widest ${
-          featured ? "text-indigo-300" : "text-indigo-600"
+          featured ? "text-indigo-300" : "text-indigo-600 dark:text-indigo-400"
         }`}
       >
         {name}
@@ -24,7 +24,7 @@ export const PricingCard = ({ name, price, desc, features, featured }) => {
           {price}
           <span
             className={`text-lg font-medium ml-1 ${
-              featured ? "text-indigo-300" : "text-slate-400"
+              featured ? "text-indigo-300" : "text-slate-400 dark:text-slate-500"
             }`}
           >
             /mo
@@ -33,7 +33,7 @@ export const PricingCard = ({ name, price, desc, features, featured }) => {
         {desc && (
           <p
             className={`text-sm mt-3 leading-relaxed ${
-              featured ? "text-indigo-300" : "text-slate-500"
+              featured ? "text-indigo-300" : "text-slate-500 dark:text-slate-400"
             }`}
           >
             {desc}
@@ -47,12 +47,12 @@ export const PricingCard = ({ name, price, desc, features, featured }) => {
           <li key={i} className="flex items-start gap-3 text-sm">
             <span
               className={`shrink-0 mt-0.5 ${
-                featured ? "text-yellow-400" : "text-indigo-600"
+                featured ? "text-yellow-400" : "text-indigo-600 dark:text-indigo-400"
               }`}
             >
               ↗
             </span>
-            <span className={featured ? "text-indigo-200" : "text-slate-600"}>
+            <span className={featured ? "text-indigo-200" : "text-slate-600 dark:text-slate-300"}>
               {feature}
             </span>
           </li>
@@ -64,13 +64,15 @@ export const PricingCard = ({ name, price, desc, features, featured }) => {
         className={`w-full py-3 px-5 rounded-xl font-bold text-xs uppercase tracking-widest transition flex items-center justify-between ${
           featured
             ? "bg-yellow-400 text-indigo-900 hover:bg-yellow-300"
-            : "bg-slate-100 text-indigo-900 hover:bg-slate-200"
+            : "bg-slate-100 dark:bg-slate-700 text-indigo-900 dark:text-indigo-100 hover:bg-slate-200 dark:hover:bg-slate-600"
         }`}
       >
         <span>Get Started</span>
         <span
           className={`w-7 h-7 rounded-full flex items-center justify-center shrink-0 ${
-            featured ? "bg-indigo-900 text-yellow-400" : "bg-indigo-900 text-white"
+            featured
+              ? "bg-indigo-900 text-yellow-400"
+              : "bg-indigo-900 text-white"
           }`}
         >
           <ArrowUpRight size={14} />

@@ -4,7 +4,7 @@ import { TestimonialCard } from "./TestimonialCard";
 export const Testimonials = () => {
   return (
     <section className="py-20">
-      <h2 className="text-4xl md:text-5xl font-black text-indigo-900 mb-12">
+      <h2 className="text-4xl md:text-5xl font-black text-indigo-900 dark:text-indigo-100 mb-12 text-center">
         Client Testimonials.
       </h2>
       <div className="grid md:grid-cols-3 gap-6">

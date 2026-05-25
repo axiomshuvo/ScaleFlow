@@ -48,7 +48,7 @@ export const Services = () => {
       {/* Division 2 — tagline + woman photo + 3 cards */}
       <div>
         {/* Heading */}
-        <h2 className="text-center text-4xl md:text-5xl font-black text-indigo-900 leading-tight mb-10">
+        <h2 className="text-center text-4xl md:text-5xl font-black text-indigo-900 dark:text-indigo-100 leading-tight mb-10">
           Digital Solutions
           <br />
           for{" "}
@@ -81,7 +81,7 @@ export const Services = () => {
               <button
                 type="button"
                 onClick={goPrev}
-                className="btn btn-circle btn-sm bg-white border border-slate-200 text-indigo-900 hover:bg-slate-50"
+                className="btn btn-circle btn-sm bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-indigo-900 dark:text-indigo-200 hover:bg-slate-50 dark:hover:bg-slate-700"
                 aria-label="Previous service slide"
               >
                 <ChevronLeft size={18} />
@@ -91,7 +91,7 @@ export const Services = () => {
               <button
                 type="button"
                 onClick={goNext}
-                className="btn btn-circle btn-sm bg-white border border-slate-200 text-indigo-900 hover:bg-slate-50"
+                className="btn btn-circle btn-sm bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-indigo-900 dark:text-indigo-200 hover:bg-slate-50 dark:hover:bg-slate-700"
                 aria-label="Next service slide"
               >
                 <ChevronRight size={18} />
@@ -102,7 +102,7 @@ export const Services = () => {
               <p className="text-xs tracking-[0.2em] font-semibold text-slate-400">
                 {String(activeSlide + 1).padStart(2, "0")}
               </p>
-              <p className="text-lg font-bold text-indigo-900 mt-1">
+              <p className="text-lg font-bold text-indigo-900 dark:text-indigo-100 mt-1">
                 {activeService.title}
               </p>
             </div>
@@ -111,7 +111,7 @@ export const Services = () => {
               <button
                 type="button"
                 onClick={goPrev}
-                className="btn btn-circle btn-xs bg-white border border-slate-200 text-indigo-900 hover:bg-slate-50"
+                className="btn btn-circle btn-xs bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-indigo-900 dark:text-indigo-200 hover:bg-slate-50 dark:hover:bg-slate-700"
                 aria-label="Previous service slide"
               >
                 <ChevronLeft size={14} />
@@ -119,7 +119,7 @@ export const Services = () => {
               <button
                 type="button"
                 onClick={goNext}
-                className="btn btn-circle btn-xs bg-white border border-slate-200 text-indigo-900 hover:bg-slate-50"
+                className="btn btn-circle btn-xs bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-indigo-900 dark:text-indigo-200 hover:bg-slate-50 dark:hover:bg-slate-700"
                 aria-label="Next service slide"
               >
                 <ChevronRight size={14} />
@@ -136,8 +136,8 @@ export const Services = () => {
                   aria-current={activeSlide === idx ? "true" : "false"}
                   className={`h-2.5 rounded-full transition-all duration-200 ${
                     activeSlide === idx
-                      ? "w-8 bg-indigo-900"
-                      : "w-2.5 bg-slate-300 hover:bg-slate-400"
+                      ? "w-8 bg-indigo-900 dark:bg-indigo-400"
+                      : "w-2.5 bg-slate-300 dark:bg-slate-600 hover:bg-slate-400 dark:hover:bg-slate-500"
                   }`}
                 />
               ))}
