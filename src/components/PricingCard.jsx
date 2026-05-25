@@ -1,20 +1,25 @@
-export const PricingCard = ({ name, price, features, featured }) => {
+import { ArrowUpRight } from "lucide-react";
+
+export const PricingCard = ({ name, price, desc, features, featured }) => {
   return (
     <div
-      className={`rounded-2xl p-8 flex flex-col gap-6 ${
+      className={`rounded-2xl p-8 flex flex-col gap-5 ${
         featured
           ? "bg-indigo-900 text-white"
           : "bg-white border border-slate-200 text-slate-900"
       }`}
     >
+      {/* Plan name */}
+      <p
+        className={`text-xs font-bold uppercase tracking-widest ${
+          featured ? "text-indigo-300" : "text-indigo-600"
+        }`}
+      >
+        {name}
+      </p>
+
+      {/* Price + desc */}
       <div>
-        <p
-          className={`text-sm font-semibold uppercase tracking-widest mb-2 ${
-            featured ? "text-indigo-300" : "text-indigo-600"
-          }`}
-        >
-          {name}
-        </p>
         <p className="text-5xl font-black">
           {price}
           <span
@@ -25,19 +30,27 @@ export const PricingCard = ({ name, price, features, featured }) => {
             /mo
           </span>
         </p>
+        {desc && (
+          <p
+            className={`text-sm mt-3 leading-relaxed ${
+              featured ? "text-indigo-300" : "text-slate-500"
+            }`}
+          >
+            {desc}
+          </p>
+        )}
       </div>
 
+      {/* Features */}
       <ul className="flex flex-col gap-3 flex-1">
         {features.map((feature, i) => (
-          <li key={i} className="flex items-center gap-3 text-sm">
+          <li key={i} className="flex items-start gap-3 text-sm">
             <span
-              className={`w-5 h-5 rounded-full flex items-center justify-center text-xs font-bold shrink-0 ${
-                featured
-                  ? "bg-yellow-400 text-indigo-900"
-                  : "bg-indigo-100 text-indigo-700"
+              className={`shrink-0 mt-0.5 ${
+                featured ? "text-yellow-400" : "text-indigo-600"
               }`}
             >
-              ✓
+              ↗
             </span>
             <span className={featured ? "text-indigo-200" : "text-slate-600"}>
               {feature}
@@ -46,14 +59,22 @@ export const PricingCard = ({ name, price, features, featured }) => {
         ))}
       </ul>
 
+      {/* Button */}
       <button
-        className={`w-full py-3 rounded-xl font-bold text-sm transition ${
+        className={`w-full py-3 px-5 rounded-xl font-bold text-xs uppercase tracking-widest transition flex items-center justify-between ${
           featured
             ? "bg-yellow-400 text-indigo-900 hover:bg-yellow-300"
-            : "bg-indigo-900 text-white hover:bg-indigo-800"
+            : "bg-slate-100 text-indigo-900 hover:bg-slate-200"
         }`}
       >
-        Get Started
+        <span>Get Started</span>
+        <span
+          className={`w-7 h-7 rounded-full flex items-center justify-center shrink-0 ${
+            featured ? "bg-indigo-900 text-yellow-400" : "bg-indigo-900 text-white"
+          }`}
+        >
+          <ArrowUpRight size={14} />
+        </span>
       </button>
     </div>
   );
