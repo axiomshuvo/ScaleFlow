@@ -21,7 +21,7 @@ export const Header = () => {
           className="flex items-center gap-2 text-xl font-black text-indigo-900 dark:text-indigo-100 tracking-tight"
           onClick={() => handleNav("#")}
         >
-          <span className="inline-block w-4 h-4 bg-indigo-900 dark:bg-indigo-400 rotate-45 rounded-sm shrink-0" />
+          <span className="inline-block w-4 h-4 bg-indigo-900 dark:bg-indigo-400 rotate-45 rounded-sm shrink-0 transition-transform duration-300 hover:rotate-[135deg]" />
           SolverCorp<span className="text-yellow-400">.</span>
         </a>
 
@@ -57,9 +57,13 @@ export const Header = () => {
         </div>
       </div>
 
-      {/* Mobile dropdown nav */}
-      {menuOpen && (
-        <div className="md:hidden border-t border-slate-100 dark:border-slate-800 bg-white dark:bg-slate-900 px-6 py-4 flex flex-col gap-1">
+      {/* Mobile dropdown nav — slide-down animation */}
+      <div
+        className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${
+          menuOpen ? "max-h-[400px]" : "max-h-0"
+        }`}
+      >
+        <div className="border-t border-slate-100 dark:border-slate-800 bg-white dark:bg-slate-900 px-6 py-4 flex flex-col gap-1">
           {NAV_LINKS.map((link) => (
             <a
               key={link.label}
@@ -75,7 +79,7 @@ export const Header = () => {
             </a>
           ))}
         </div>
-      )}
+      </div>
     </header>
   );
 };

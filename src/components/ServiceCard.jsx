@@ -1,10 +1,10 @@
 export const ServiceItem = ({ number, title, desc, featured }) => {
   return (
     <div
-      className={`rounded-2xl p-6 flex flex-col gap-3 ${
+      className={`rounded-2xl p-6 flex flex-col gap-3 transition-all duration-200 ${
         featured
-          ? "bg-indigo-900 text-white"
-          : "bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700"
+          ? "bg-indigo-900 text-white hover:-translate-y-1 hover:shadow-lg hover:shadow-indigo-900/30"
+          : "bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:-translate-y-1 hover:shadow-lg"
       }`}
     >
       <p

@@ -3,10 +3,10 @@ import { ArrowUpRight } from "lucide-react";
 export const PricingCard = ({ name, price, desc, features, featured }) => {
   return (
     <div
-      className={`rounded-2xl p-8 flex flex-col gap-5 ${
+      className={`rounded-2xl p-8 flex flex-col gap-5 transition-all duration-200 ${
         featured
-          ? "bg-indigo-900 text-white"
-          : "bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-slate-100"
+          ? "bg-indigo-900 text-white hover:-translate-y-2 hover:shadow-2xl hover:shadow-indigo-900/30"
+          : "bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-slate-100 hover:-translate-y-2 hover:shadow-xl"
       }`}
     >
       {/* Plan name */}

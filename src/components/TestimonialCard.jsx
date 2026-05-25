@@ -7,7 +7,7 @@ export const TestimonialCard = ({ name, role, text }) => {
     .toUpperCase();
 
   return (
-    <div className="bg-white dark:bg-slate-800 border border-slate-100 dark:border-slate-700 rounded-2xl p-8 shadow-sm hover:shadow-md transition flex flex-col gap-4">
+    <div className="bg-white dark:bg-slate-800 border border-slate-100 dark:border-slate-700 rounded-2xl p-8 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-200 flex flex-col gap-4">
       <p className="text-slate-600 dark:text-slate-300 text-sm leading-relaxed flex-1">
         "{text}"
       </p>

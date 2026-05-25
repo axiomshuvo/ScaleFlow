@@ -10,6 +10,7 @@ export { Hero } from "./Hero";
 export { CaseStudyRow } from "./PortfolioCard";
 export { Pricing } from "./Pricing";
 export { PricingCard } from "./PricingCard";
+export { Reveal } from "./Reveal";
 export { ServiceItem } from "./ServiceCard";
 export { Services } from "./Services";
 export { StatItem } from "./StatCard";

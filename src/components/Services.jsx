@@ -1,6 +1,7 @@
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useState } from "react";
 import { SERVICES } from "../utils/constants";
+import { Reveal } from "./Reveal";
 import { ServiceItem } from "./ServiceCard";
 
 const SLIDE_DECOR = [
@@ -48,113 +49,130 @@ export const Services = () => {
       {/* Division 2 — tagline + woman photo + 3 cards */}
       <div>
         {/* Heading */}
-        <h2 className="text-center text-4xl md:text-5xl font-black text-indigo-900 dark:text-indigo-100 leading-tight mb-10">
-          Digital Solutions
-          <br />
-          for{" "}
-          <span className="bg-yellow-400 text-indigo-900 px-2">
-            Business Growth.
-          </span>
-        </h2>
+        <Reveal>
+          <h2 className="text-center text-4xl md:text-5xl font-black text-indigo-900 dark:text-indigo-100 leading-tight mb-10">
+            Digital Solutions
+            <br />
+            for{" "}
+            <span className="bg-yellow-400 text-indigo-900 px-2">
+              Business Growth.
+            </span>
+          </h2>
+        </Reveal>
 
         {/* Woman photo carousel with decorative CSS blocks */}
-        <div className="mb-12">
-          <div className="relative mx-auto w-fit">
-            <div className="relative">
-              <img
-                src="https://images.pexels.com/photos/8498310/pexels-photo-8498310.jpeg?auto=compress&cs=tinysrgb&w=400"
-                alt={activeService.title}
-                className="w-52 h-72 object-cover rounded-2xl relative z-10 transition-all duration-300"
-              />
-              <div
-                className={`absolute rounded-lg z-0 pointer-events-none ${activeDecor.left}`}
-              />
-              <div
-                className={`absolute rounded-lg z-0 pointer-events-none ${activeDecor.right}`}
-              />
-              <div
-                className={`absolute rounded-lg z-0 pointer-events-none ${activeDecor.bottom}`}
-              />
-            </div>
-
-            <div className="absolute inset-y-0 -left-14 hidden sm:flex items-center">
-              <button
-                type="button"
-                onClick={goPrev}
-                className="btn btn-circle btn-sm bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-indigo-900 dark:text-indigo-200 hover:bg-slate-50 dark:hover:bg-slate-700"
-                aria-label="Previous service slide"
-              >
-                <ChevronLeft size={18} />
-              </button>
-            </div>
-            <div className="absolute inset-y-0 -right-14 hidden sm:flex items-center">
-              <button
-                type="button"
-                onClick={goNext}
-                className="btn btn-circle btn-sm bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-indigo-900 dark:text-indigo-200 hover:bg-slate-50 dark:hover:bg-slate-700"
-                aria-label="Next service slide"
-              >
-                <ChevronRight size={18} />
-              </button>
-            </div>
-
-            <div className="mt-6 text-center">
-              <p className="text-xs tracking-[0.2em] font-semibold text-slate-400">
-                {String(activeSlide + 1).padStart(2, "0")}
-              </p>
-              <p className="text-lg font-bold text-indigo-900 dark:text-indigo-100 mt-1">
-                {activeService.title}
-              </p>
-            </div>
-
-            <div className="mt-4 flex items-center justify-center gap-3 sm:hidden">
-              <button
-                type="button"
-                onClick={goPrev}
-                className="btn btn-circle btn-xs bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-indigo-900 dark:text-indigo-200 hover:bg-slate-50 dark:hover:bg-slate-700"
-                aria-label="Previous service slide"
-              >
-                <ChevronLeft size={14} />
-              </button>
-              <button
-                type="button"
-                onClick={goNext}
-                className="btn btn-circle btn-xs bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-indigo-900 dark:text-indigo-200 hover:bg-slate-50 dark:hover:bg-slate-700"
-                aria-label="Next service slide"
-              >
-                <ChevronRight size={14} />
-              </button>
-            </div>
-
-            <div className="mt-4 flex items-center justify-center gap-2">
-              {SERVICES.map((service, idx) => (
-                <button
-                  key={service.title}
-                  type="button"
-                  onClick={() => setActiveSlide(idx)}
-                  aria-label={`Go to ${service.title} slide`}
-                  aria-current={activeSlide === idx ? "true" : "false"}
-                  className={`h-2.5 rounded-full transition-all duration-200 ${
-                    activeSlide === idx
-                      ? "w-8 bg-indigo-900 dark:bg-indigo-400"
-                      : "w-2.5 bg-slate-300 dark:bg-slate-600 hover:bg-slate-400 dark:hover:bg-slate-500"
-                  }`}
+        <Reveal delay={100}>
+          <div className="mb-12">
+            <div className="relative mx-auto w-fit">
+              <div className="relative">
+                <img
+                  src="https://images.pexels.com/photos/8498310/pexels-photo-8498310.jpeg?auto=compress&cs=tinysrgb&w=400"
+                  alt={activeService.title}
+                  className="w-52 h-72 object-cover rounded-2xl relative z-10 transition-all duration-300"
                 />
-              ))}
+                {/* key triggers hero-enter fade on slide change */}
+                <div
+                  key={activeSlide}
+                  className="hero-enter"
+                  style={{ animationDuration: "0.3s" }}
+                >
+                  <div
+                    className={`absolute rounded-lg z-0 pointer-events-none ${activeDecor.left}`}
+                  />
+                  <div
+                    className={`absolute rounded-lg z-0 pointer-events-none ${activeDecor.right}`}
+                  />
+                  <div
+                    className={`absolute rounded-lg z-0 pointer-events-none ${activeDecor.bottom}`}
+                  />
+                </div>
+              </div>
+
+              <div className="absolute inset-y-0 -left-14 hidden sm:flex items-center">
+                <button
+                  type="button"
+                  onClick={goPrev}
+                  className="btn btn-circle btn-sm bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-indigo-900 dark:text-indigo-200 hover:bg-slate-50 dark:hover:bg-slate-700"
+                  aria-label="Previous service slide"
+                >
+                  <ChevronLeft size={18} />
+                </button>
+              </div>
+              <div className="absolute inset-y-0 -right-14 hidden sm:flex items-center">
+                <button
+                  type="button"
+                  onClick={goNext}
+                  className="btn btn-circle btn-sm bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-indigo-900 dark:text-indigo-200 hover:bg-slate-50 dark:hover:bg-slate-700"
+                  aria-label="Next service slide"
+                >
+                  <ChevronRight size={18} />
+                </button>
+              </div>
+
+              <div className="mt-6 text-center">
+                <p className="text-xs tracking-[0.2em] font-semibold text-slate-400">
+                  {String(activeSlide + 1).padStart(2, "0")}
+                </p>
+                <p
+                  key={activeSlide}
+                  className="text-lg font-bold text-indigo-900 dark:text-indigo-100 mt-1 hero-enter"
+                  style={{ animationDuration: "0.3s" }}
+                >
+                  {activeService.title}
+                </p>
+              </div>
+
+              <div className="mt-4 flex items-center justify-center gap-3 sm:hidden">
+                <button
+                  type="button"
+                  onClick={goPrev}
+                  className="btn btn-circle btn-xs bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-indigo-900 dark:text-indigo-200 hover:bg-slate-50 dark:hover:bg-slate-700"
+                  aria-label="Previous service slide"
+                >
+                  <ChevronLeft size={14} />
+                </button>
+                <button
+                  type="button"
+                  onClick={goNext}
+                  className="btn btn-circle btn-xs bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-indigo-900 dark:text-indigo-200 hover:bg-slate-50 dark:hover:bg-slate-700"
+                  aria-label="Next service slide"
+                >
+                  <ChevronRight size={14} />
+                </button>
+              </div>
+
+              <div className="mt-4 flex items-center justify-center gap-2">
+                {SERVICES.map((service, idx) => (
+                  <button
+                    key={service.title}
+                    type="button"
+                    onClick={() => setActiveSlide(idx)}
+                    aria-label={`Go to ${service.title} slide`}
+                    aria-current={activeSlide === idx ? "true" : "false"}
+                    className={`h-2.5 rounded-full transition-all duration-200 ${
+                      activeSlide === idx
+                        ? "w-8 bg-indigo-900 dark:bg-indigo-400"
+                        : "w-2.5 bg-slate-300 dark:bg-slate-600 hover:bg-slate-400 dark:hover:bg-slate-500"
+                    }`}
+                  />
+                ))}
+              </div>
             </div>
           </div>
-        </div>
+        </Reveal>
 
         {/* 3 service cards */}
         <div className="grid md:grid-cols-3 gap-4">
           {SERVICES.map((service, idx) => (
-            <ServiceItem
-              key={service.title}
-              number={String(idx + 1).padStart(2, "0")}
-              title={service.title}
-              desc={service.desc}
-              featured={idx === 0}
-            />
+            <Reveal key={service.title} delay={idx * 80}>
+              <ServiceItem
+                key={service.title}
+                number={String(idx + 1).padStart(2, "0")}
+                title={service.title}
+                desc={service.desc}
+                featured={idx === 0}
+              />
+            </Reveal>
           ))}
         </div>
       </div>
