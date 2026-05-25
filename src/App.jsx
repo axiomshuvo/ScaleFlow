@@ -1,6 +1,7 @@
 import {
   About,
   CaseStudies,
+  Contact,
   CTA,
   FAQ,
   Footer,
@@ -24,6 +25,7 @@ function App() {
         <Pricing />
         <FAQ />
         <Testimonials />
+        <Contact />
         <CTA />
       </main>
 

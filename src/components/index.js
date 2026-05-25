@@ -1,5 +1,6 @@
 export { About } from "./About";
 export { CaseStudies } from "./CaseStudies";
+export { Contact } from "./Contact";
 export { CTA } from "./CTA";
 export { FAQ } from "./FAQ";
 export { FaqItem } from "./FaqItem";

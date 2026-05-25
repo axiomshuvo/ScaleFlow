@@ -14,6 +14,19 @@ Before writing any code or making changes:
 
 ---
 
+## 1a. Prompt Queue Rule — Execute Queued Prompts Automatically
+
+The user may send new prompts while a plan is pending or while a task is in progress. Treat every such prompt as **queued work** and handle it as follows:
+
+1. **If a plan is already presented and a new prompt arrives**, treat the new prompt as queued. Complete the pending plan execution first (as if the user said "go"), then immediately plan + execute the queued prompt without waiting for a separate approval.
+2. **If multiple prompts are queued**, execute them in the order they were received. After each task completes (build verified + pushed), move to the next without pausing.
+3. **If a queued prompt conflicts with or supersedes a pending task** (e.g. user says "cancel" or "change this instead"), abort the pending plan and handle the new prompt fresh.
+4. **Always confirm at the end of the full queue** — summarise every task completed in that queue run so the user knows all work is done.
+
+> This lets the user send prompts freely without waiting for each cycle to finish before typing the next one.
+
+---
+
 ## 2. Always Verify Output Before Calling Work Complete
 
 **After every implementation — no exceptions — run a verification check before git push or telling the user the work is done.**
@@ -109,7 +122,7 @@ The project splits UI into **section components** (one per page section) and **n
 
 ### Section components (in `src/components/`):
 
-`Header` · `Hero` · `About` · `CaseStudies` · `Services` · `Pricing` · `FAQ` · `Testimonials` · `CTA` · `Footer`
+`Header` · `Hero` · `About` · `CaseStudies` · `Services` · `Pricing` · `FAQ` · `Testimonials` · `Contact` · `CTA` · `Footer`
 
 ### Sub-components (reusable named pieces):
 

@@ -109,6 +109,12 @@ export const FAQ_ITEMS = [
   },
 ];
 
+export const CONTACT_INFO = [
+  { label: "Email", value: "hello@solvercorp.com" },
+  { label: "Phone", value: "+1 (555) 000-1234" },
+  { label: "Office", value: "New York, NY 10001" },
+];
+
 export const TESTIMONIALS = [
   {
     name: "Cameron Williamson",

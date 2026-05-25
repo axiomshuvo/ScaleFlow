@@ -1,9 +1,6 @@
 export const CTA = () => {
   return (
-    <section
-      id="contact"
-      className="py-20 bg-indigo-900 rounded-3xl text-white text-center px-8 md:px-16"
-    >
+    <section className="py-20 bg-indigo-900 rounded-3xl text-white text-center px-8 md:px-16">
       <h2 className="text-4xl md:text-5xl font-black leading-tight mb-10">
         Drive <span className="text-yellow-400">Quality Leads,</span>
         <br />
