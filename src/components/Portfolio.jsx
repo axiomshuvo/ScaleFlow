@@ -11,7 +11,7 @@ export const Portfolio = () => {
       </div>
       <div className="grid md:grid-cols-3 gap-6">
         {PORTFOLIO.map((item, idx) => (
-          <PortfolioCard key={idx} item={item} idx={idx} />
+          <PortfolioCard key={item.id} item={item} idx={idx} />
         ))}
       </div>
     </section>

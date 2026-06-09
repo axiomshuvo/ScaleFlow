@@ -1,7 +1,7 @@
 export const NAV_LINKS = [
   { label: "Home", href: "#" },
   { label: "About Us", href: "#about" },
-  { label: "Portfolio", href: "#cases" },
+  { label: "Portfolio", href: "#work" },
   { label: "Services", href: "#services" },
   { label: "Pricing", href: "#pricing" },
   { label: "Contact", href: "#contact" },
@@ -151,5 +151,62 @@ export const TESTIMONIALS = [
     name: "Helga Rodriguez",
     role: "Founder",
     text: "A talented group who are easy to work with and deeply understand performance marketing.",
+  },
+];
+
+export const PORTFOLIO = [
+  {
+    id: 1,
+    label: "Brand & digital launch",
+    name: "Lumen Studio",
+    date: "Jan 2025",
+    desc: "A premium website launch for a modern creative studio, focused on bold visuals and seamless UX.",
+    image:
+      "https://images.pexels.com/photos/1698937/pexels-photo-1698937.jpeg?auto=compress&cs=tinysrgb&w=600",
+    challenge:
+      "Lumen Studio needed a polished digital presence that matched their luxury creative direction and converted visitors into new client inquiries.",
+    solution:
+      "We built a fast, responsive brand site with premium imagery, clear service storytelling, and a high-converting contact flow for design leads.",
+    results: [
+      "+34% increase in demo requests within 30 days",
+      "3x higher time on page for service detail sections",
+      "A stronger brand identity with refined visual messaging",
+    ],
+  },
+  {
+    id: 2,
+    label: "E-commerce redesign",
+    name: "Nova Retail",
+    date: "Mar 2025",
+    desc: "A conversion-first e-commerce redesign that boosted desktop and mobile sales with smart product storytelling.",
+    image:
+      "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=600",
+    challenge:
+      "Nova Retail struggled with a dated storefront that made product discovery hard and checkout conversions low.",
+    solution:
+      "We redesigned the site around customer journeys, improved product detail clarity, and simplified checkout progression for faster purchases.",
+    results: [
+      "24% lift in add-to-cart rate",
+      "18% reduction in cart abandonment",
+      "Better mobile shopping experience across all product categories",
+    ],
+  },
+  {
+    id: 3,
+    label: "Fintech branding refresh",
+    name: "Sync Finance",
+    date: "May 2025",
+    desc: "A fintech branding refresh and landing page system built for trust, clarity, and faster demo signups.",
+    image:
+      "https://images.pexels.com/photos/1181672/pexels-photo-1181672.jpeg?auto=compress&cs=tinysrgb&w=600",
+    challenge:
+      "Sync Finance needed to present a clear, modern enterprise product story while building confidence with finance buyers.",
+    solution:
+      "We crafted a polished landing experience with trust-led messaging, modular feature blocks, and a focused demo request funnel.",
+    results: [
+      "42% increase in demo signups",
+      "Stronger messaging that aligned product benefits with buyer pain points",
+      "A scalable page template for future product launches",
+    ],
   },
 ];
